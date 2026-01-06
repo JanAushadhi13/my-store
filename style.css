@@ -253,14 +253,109 @@ body::before {
 
 /* =========================
    FOOTER
-========================= */
-.modern-footer {
+========================== */
+.animated-footer {
+  padding: 60px 20px 20px;
   background: linear-gradient(135deg, #1b5e20, #2e7d32);
   color: white;
-  padding: 35px 20px;
-  text-align: center;
+  overflow: hidden;
+  position: relative;
 }
 
+.footer-glass {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.3);
+}
+
+/* FOOTER TEXT */
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 10px;
+  color: #e8ffef;
+}
+
+.footer-col p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.footer-col a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-col a:hover {
+  color: #b9ffd4;
+}
+
+/* TAGLINE */
+.tagline {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: footerFadeUp 1s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+@keyframes footerFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FLOATING GRADIENT EFFECT */
+.animated-footer::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.15), transparent 60%);
+  animation: glowMove 8s linear infinite;
+}
+
+@keyframes glowMove {
+  0% { transform: translateX(-20%); }
+  50% { transform: translateX(20%); }
+  100% { transform: translateX(-20%); }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  .footer-glass {
+    padding: 25px;
+    text-align: center;
+  }
+}
 /* =========================
    ANIMATIONS
 ========================= */
