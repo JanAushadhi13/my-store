@@ -1,22 +1,4 @@
 const medicines = [
-  {
-    id: 1,
-    name: "Paracetamol 500mg",
-    price: 15,
-    prescription_required: false
-  },
-  {
-    id: 2,
-    name: "Amoxicillin 250mg",
-    price: 45,
-    prescription_required: true
-  },
-  {
-    id: 3,
-    name: "Cetirizine Tablet",
-    price: 12,
-    prescription_required: false
-  },
   { id: 1, name: "Aceclofenac 100mg and Paracetamol 325mg Tablets", price: 9.38, unit: "10's", category: "Analgesic/Antipyretic/Anti-Inflammatory", prescription_required: true },
   { id: 2, name: "Aceclofenac Tablets IP 100 mg", price: 7.5, unit: "10's", category: "Analgesic/Antipyretic/Anti-Inflammatory", prescription_required: true },
   { id: 3, name: "Pregabalin Capsules IP 75 mg", price: 20.63, unit: "10's", category: "Central Nervous System (CNS)", prescription_required: true },
@@ -2456,4 +2438,5 @@ const medicines = [
   { id: 9066, name: "Ankle binder Support (Medium)", price: 0.0, unit: "One in Mono-Carton", category: "Surgical & Medical Consumables", prescription_required: true },
   { id: 9067, name: "Ankle binder Support (Large)", price: 0.0, unit: "One in Mono-Carton", category: "Surgical & Medical Consumables", prescription_required: true },
   { id: 9068, name: "Cotton Ear Buds", price: 0.0, unit: "100 Ear Buds", category: "Surgical & Medical Consumables", prescription_required: true },
+
 ];
