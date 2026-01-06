@@ -1,14 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Jan Aushadhi Medical Store</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.google.com/specimen/Archivo+Black">
-</head>
 
+  <style>
+    /* =====================
+       EXTRA ANIMATIONS & UI
+    ===================== */
+
+    /* Header nav hover glow */
+    .nav-link,
+    .btn-login {
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+      box-shadow: 0 8px 20px rgba(15,157,88,0.25);
+    }
+
+    /* Hero buttons pulse */
+    .btn-primary,
+    .btn-outline {
+      animation: softPulse 3s infinite;
+    }
+
+    @keyframes softPulse {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    /* Trust & Feature card stagger animation */
+    .trust-card,
+    .feature-card {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: revealUp 0.9s ease forwards;
+    }
+
+    .trust-card:nth-child(2),
+    .feature-card:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .trust-card:nth-child(3),
+    .feature-card:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes revealUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Footer animation */
+    .animated-footer {
+      background: linear-gradient(135deg, #1b5e20, #2e7d32);
+      color: white;
+      padding-top: 50px;
+      animation: fadeUp 1.2s ease;
+    }
+
+    .footer-glass {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      border-radius: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-col h3,
+    .footer-col h4 {
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .footer-col p,
+    .footer-col a {
+      font-size: 0.95rem;
+      color: #e0f2f1;
+      text-decoration: none;
+    }
+
+    .footer-col a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    /* Delays */
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+
+    /* Mobile spacing fix */
+    @media (max-width: 768px) {
+      .hero-content h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
 
 <body>
 
@@ -21,7 +126,6 @@
     </h1>
   </div>
 
-  <!-- NAVIGATION -->
   <nav class="nav">
     <a href="index.html" class="nav-link active">Home</a>
     <a href="shop.html" class="nav-link">Shop</a>
@@ -49,7 +153,7 @@
   </div>
 </section>
 
-<!-- TRUST SECTION -->
+<!-- TRUST -->
 <section class="trust-section" id="trust">
   <h2 class="trust-title">Why Trust Jan Aushadhi?</h2>
 
@@ -74,7 +178,7 @@
   </div>
 </section>
 
-<!-- FEATURES SECTION -->
+<!-- FEATURES -->
 <section class="features-section">
   <h2 class="features-title">Our Key Features</h2>
 
@@ -99,7 +203,7 @@
   </div>
 </section>
 
-
+<!-- FOOTER -->
 <footer class="animated-footer">
   <div class="footer-glass">
 
@@ -125,12 +229,8 @@
 
     <div class="footer-col fade-up delay-3">
       <h4>📞 Contact</h4>
-      <p>
-        <a href="tel:9351849372">📱 9351849372</a>
-      </p>
-      <p>
-        <a href="https://wa.me/919351849372" target="_blank">💬 WhatsApp Order</a>
-      </p>
+      <p><a href="tel:9351849372">📱 9351849372</a></p>
+      <p><a href="https://wa.me/919351849372" target="_blank">💬 WhatsApp Order</a></p>
     </div>
 
   </div>
@@ -142,7 +242,6 @@
     </p>
   </div>
 </footer>
-
 
 </body>
 </html>
