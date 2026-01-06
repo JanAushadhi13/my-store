@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medicine Shop | Jan Aushadhi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <h1>Jan Aushadhi Medicine Shop</h1>
+  <p class="sub">Government-approved quality generic medicines</p>
+
+  <input
+    type="text"
+    id="searchInput"
+    class="search-box"
+    placeholder="Search medicine..."
+    onkeyup="searchMedicine()"
+  >
+</header>
+
+<section class="container">
+  <div class="grid" id="list">
+    <p class="loading">Loading medicines…</p>
+  </div>
+</section>
+
+<script src="js/products.js"></script>
+
+<script>
+  const list = document.getElementById("list");
+
+  // Render medicines
+  function renderMedicines(data) {
+    list.innerHTML = "";
+
+    if (data.length === 0) {
+      list.innerHTML = "<p class='error'>No medicine found</p>";
+      return;
+    }
+
+    data.forEach(m => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      card.innerHTML = `
+        <h3>${m.name}</h3>
+        <p class="price">₹${m.price}</p>
+        <span class="badge ${m.prescription_required ? 'rx' : 'otc'}">
+          ${m.prescription_required ? 'Prescription Required' : 'OTC Medicine'}
+        </span>
+        <button class="btn" onclick="addToCart(${m.id})">
+          Add to Cart
+        </button>
+      `;
+
+      list.appendChild(card);
+    });
+  }
+
+  // Search
+  function searchMedicine() {
+    const value = searchInput.value.toLowerCase();
+    const filtered = medicines.filter(m =>
+      m.name.toLowerCase().includes(value)
+    );
+    renderMedicines(filtered);
+  }
+
+  // Add to Cart (FIXED)
+  function addToCart(id) {
+    const medicine = medicines.find(m => m.id === id);
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(medicine);
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(medicine.name + " added to cart");
+  }
+
+  // Initial Load
+  renderMedicines(medicines);
+</script>
+
+</body>
+</html>

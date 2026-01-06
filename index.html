@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Jan Aushadhi Medical Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.google.com/specimen/Archivo+Black">
+</head>
+
+
+<body>
+
+<!-- HEADER -->
+<header class="modern-header">
+  <div class="logo-box">
+    <h1 class="logo-text">
+      Jan Aushadhi Medical Store
+      <span>Government of India • Quality Generic Medicines</span>
+    </h1>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="shop.html" class="nav-link">Shop</a>
+    <a href="cart.html" class="nav-link">Cart</a>
+    <a href="login.html" class="btn-login">Login</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero hero-bg">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content fade-up">
+    <h2>Affordable Medicines for Everyone</h2>
+
+    <p class="hero-text">
+      <strong>Quality-assured generic medicines</strong><br>
+      at <strong>government-approved prices</strong>
+    </p>
+
+    <div class="hero-actions">
+      <a href="shop.html" class="btn-primary">Shop Medicines</a>
+      <a href="#trust" class="btn-outline">Why Jan Aushadhi?</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SECTION -->
+<section class="trust-section" id="trust">
+  <h2 class="trust-title">Why Trust Jan Aushadhi?</h2>
+
+  <div class="trust-container">
+    <div class="trust-card">
+      <div class="icon">💊</div>
+      <h3>WHO-GMP Certified</h3>
+      <p>Medicines manufactured under strict international quality standards.</p>
+    </div>
+
+    <div class="trust-card">
+      <div class="icon">💰</div>
+      <h3>Up to 80% Savings</h3>
+      <p>Same composition as branded medicines at much lower prices.</p>
+    </div>
+
+    <div class="trust-card">
+      <div class="icon">🧑‍⚕️</div>
+      <h3>Pharmacist Verified</h3>
+      <p>Every medicine is dispensed by registered pharmacists.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features-section">
+  <h2 class="features-title">Our Key Features</h2>
+
+  <div class="features-container">
+    <div class="feature-card">
+      <div class="feature-icon">🚚</div>
+      <h3>Fast Local Delivery</h3>
+      <p>Quick & reliable delivery within your town.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">📦</div>
+      <h3>Wide Medicine Range</h3>
+      <p>All essential medicines & surgical items available.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <h3>Safe & Trusted</h3>
+      <p>Prescription-based dispensing where required.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ANIMATED FOOTER -->
+ <style>/* =========================
+   ANIMATED FOOTER
+========================= */
+.animated-footer {
+  padding: 60px 20px 20px;
+  background: linear-gradient(135deg, #1b5e20, #2e7d32);
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-glass {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.3);
+}
+
+/* FOOTER TEXT */
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 10px;
+  color: #e8ffef;
+}
+
+.footer-col p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.footer-col a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-col a:hover {
+  color: #b9ffd4;
+}
+
+/* TAGLINE */
+.tagline {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: footerFadeUp 1s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+@keyframes footerFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FLOATING GRADIENT EFFECT */
+.animated-footer::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.15), transparent 60%);
+  animation: glowMove 8s linear infinite;
+}
+
+@keyframes glowMove {
+  0% { transform: translateX(-20%); }
+  50% { transform: translateX(20%); }
+  100% { transform: translateX(-20%); }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  .footer-glass {
+    padding: 25px;
+    text-align: center;
+  }
+}
+</style>
+<footer class="animated-footer">
+  <div class="footer-glass">
+
+    <div class="footer-col fade-up">
+      <h3>🏥 Jan Aushadhi Medical Store</h3>
+      <p class="tagline">Government of India • Quality Generic Medicines</p>
+    </div>
+
+    <div class="footer-col fade-up delay-1">
+      <h4>👨‍⚕️ Pharmacist</h4>
+      <p><strong>Deepak Sharma</strong></p>
+      <p>Registered Pharmacist</p>
+    </div>
+
+    <div class="footer-col fade-up delay-2">
+      <h4>📍 Address</h4>
+      <p>
+        Ajeetgarh, Sikar<br>
+        Near Shyam Mandir<br>
+        Rajasthan – 332701
+      </p>
+    </div>
+
+    <div class="footer-col fade-up delay-3">
+      <h4>📞 Contact</h4>
+      <p>
+        <a href="tel:9351849372">📱 9351849372</a>
+      </p>
+      <p>
+        <a href="https://wa.me/919351849372" target="_blank">💬 WhatsApp Order</a>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      Prescription medicines will be dispensed only on valid prescription
+      as per Government of India rules.
+    </p>
+  </div>
+</footer>
+
+
+</body>
+</html>
